@@ -1,0 +1,23 @@
+{
+  "validInputs": {
+    "textInput": "Hello",
+    "userRole": "Admin",
+    "employeeName": "John",
+    "status": "Enabled"
+  },
+  "invalidInputs": {
+    "textInput": "",
+    "userRole": "InvalidRole",
+    "employeeName": "NonExistingName",
+    "status": "Disabled"
+  },
+  "search": {
+    "query": "John",
+    "expectedSuggestions": ["John Doe", "Johnny Appleseed"],
+    "selectedSuggestion": "John Doe"
+  },
+  "buttons": {
+    "submitButton": 0,
+    "resetButton": 1
+  }
+}
