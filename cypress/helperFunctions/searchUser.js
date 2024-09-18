@@ -22,7 +22,10 @@ export function waitForSuggestions() {
         });
 
         if (matchingSuggestion) {
-          cy.contains('div[role="listbox"]', matchingSuggestion).click();
+          const cleanedSuggestion = matchingSuggestion
+            .replace(/\s+/g, " ")
+            .trim();
+          cy.contains('div[role="listbox"]', cleanedSuggestion).click();
         } else {
           cy.log("No matching suggestion found.");
         }
